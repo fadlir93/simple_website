@@ -1,0 +1,11 @@
+development:
+  cloud_name: "dcv44kapm"
+  api_key: "343136662589261"
+  api_secret: "IOc_btghfc0GuQpjfxIA-DR_A6k"
+
+production:
+  cloud_name: "dcv44kapm"
+  api_key: "343136662589261"
+  api_secret: "IOc_btghfc0GuQpjfxIA-DR_A6k"
+  secure: true
+  cdn_subdomain: true
