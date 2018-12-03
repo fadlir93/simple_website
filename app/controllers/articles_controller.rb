@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class ArticlesController < ApplicationController
-  skip_before_action :verify_authenticity_token
 
   def new
     @article = Article.new
@@ -18,12 +17,12 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     if @article.save
-      # flash[:notice] = 'Article was Successfully Created'
-      # redirect_to @article
-      render json: { result: true, msg: @article}, status: :created
+      flash[:notice] = 'Article was Successfully Created'
+      redirect_to @article
+      #render json: { result: true, msg: @article}, status: :created
     else
-      # render 'new'
-      render json: {result: false, article: @article.errors }, status: :unprocessable_entity
+      render 'new'
+      #render json: {result: false, article: @article.errors }, status: :unprocessable_entity
     end
   end
 
@@ -51,6 +50,6 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.permit(:title, :description, :name)
+    params.require(:article).permit(:title, :description)
   end
 end
