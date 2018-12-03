@@ -1,0 +1,31 @@
+<%if obj.errors.any? %>
+    <div class="row">
+        <div class="col-xs-8 col-xs-offset-2">
+            <div class="panel panel-danger">
+                <div class="panel-heading">
+                    <h2 class="panel-title">
+                        Terdapat
+                        <%= pluralize(obj.errors.count, "error") %>
+                            (Artikel ini tidak bisa disimpan)
+                    </h2>
+                    <div class="panel-body">
+                        <ul>
+                            <h4>Terdapat pesan errors</h4>
+                            <%obj.errors.full_messages.each do |msg|%>
+                                <% if msg.to_s == "Title is too short (minimum is 3 characters)" %>
+                                <li> Judul nya pendek (minimum 3 karakter)</li>
+                                <% elsif msg.to_s == "Description is too short (minimum is 3 characters)" %>
+                                <li> Description nya pendek (minimum 3 karakter) 
+                                <% elsif msg.to_s == "Title can't be blank"%>
+                                <li>Title Harus Di isi tidak boleh kosong</li>
+                                <% elsif msg.to_s == "Description can't be blank"%>
+                                <li>Description Harus di isi tidak boleh kosong</li>
+                                <% end %>
+                            <% end %>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<% end %>
