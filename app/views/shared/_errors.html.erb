@@ -12,7 +12,7 @@
                         <ul>
                             <h4>Terdapat pesan errors</h4>
                             <%obj.errors.full_messages.each do |msg|%>
-                                <% if msg.to_s == "Title is too short (minimum is 3 characters)" %>
+                                <<% if msg.to_s == "Title is too short (minimum is 3 characters)" %>
                                 <li> Judul nya pendek (minimum 3 karakter)</li>
                                 <% elsif msg.to_s == "Description is too short (minimum is 3 characters)" %>
                                 <li> Description nya pendek (minimum 3 karakter) 
@@ -20,7 +20,7 @@
                                 <li>Title Harus Di isi tidak boleh kosong</li>
                                 <% elsif msg.to_s == "Description can't be blank"%>
                                 <li>Description Harus di isi tidak boleh kosong</li>
-                                <% end %>
+                                <% end %>>
                             <% end %>
                         </ul>
                     </div>
