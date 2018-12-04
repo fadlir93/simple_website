@@ -30,6 +30,15 @@ $navbar-default-bg:black;
     background-color: black;
 }
 
+.article-actions {
+    border-top: 1px solid #eaeaea;
+    padding-top: 5px;
+}
+
+.description {
+    margin-top: 0;
+}
+
 .jumbotron {
     background-image: asset-url('jumbotron.png');
     background-repeat: no-repeat;
