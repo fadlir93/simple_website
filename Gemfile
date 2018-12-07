@@ -9,6 +9,8 @@ gem 'cloudinary'
 gem 'bootstrap-sass', '~> 3.3.7'
 gem 'jquery-rails'
 gem 'bcrypt', '~> 3.1.7'
+gem 'will_paginate', '3.1.5'
+gem 'bootstrap-will_paginate','1.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
 # Use postgresql as the database for Active Record
