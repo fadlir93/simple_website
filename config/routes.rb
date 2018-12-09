@@ -8,9 +8,11 @@ Rails.application.routes.draw do
   resources :articles
   get 'signup', to: 'users#new'
   resources :users , except: [:new]
+  
   get 'login', to: 'sessionns#new'
   post 'login', to: 'sessionns#create'
   delete 'logout', to: 'sessionns#destroy'
   
+  resources :categories, except: [:destroy]
 
 end
