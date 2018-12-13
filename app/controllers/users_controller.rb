@@ -2,6 +2,7 @@ class UsersController < ApplicationController
     before_action :set_user, only: [:edit, :update, :show]
     before_action :require_same_user, only: [:edit, :update, :destroy]
     before_action :require_admin, only: [:destroy]
+    skip_before_action :verify_authenticity_token
 
     def new
         @user = User.new
