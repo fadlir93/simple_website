@@ -13,6 +13,10 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.paginate(page: params[:page], per_page: 5) 
+     #if params[:search].present?
+     #  search = params[:search].downcase
+      # @articles = Article.where([("description LIKE?" || "title LIKE?"),"%#{params[:search].downcase!}%"])
+     #end
   end
 
   def edit
@@ -68,3 +72,4 @@ class ArticlesController < ApplicationController
     end
   end
 end
+

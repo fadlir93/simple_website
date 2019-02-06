@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'pages/home'
   root 'pages#home'
   get 'pages/about'
-  
+  get '/search', to: 'pages#search', as: 'search'
   resources :articles
   get 'signup', to: 'users#new'
   resources :users , except: [:new]

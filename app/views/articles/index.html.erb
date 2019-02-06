@@ -1,8 +1,10 @@
 <h1 align="center"> Listing All article</h1>
 <div align="center">
-    <%= will_paginate %>
+<!-- <%= form_tag articles_path, :method => 'get' do %>
+<%= text_field_tag :search, params[:search] %>
+<%= submit_tag "Search" %>
+<% end %> -->
+<%= will_paginate %>    
 </div>
 <%= render 'article', obj: @articles%>
-<div align="center">
-    <%= will_paginate %>
-</div>
+<%= will_paginate %>
